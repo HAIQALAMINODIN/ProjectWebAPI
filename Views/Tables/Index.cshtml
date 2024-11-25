@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RestaurantManagement.Models.Table>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Table List</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th>Table Number</th>
+                            <th>Capacity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var table in Model)
+                        {
+                            <tr>
+                                <td>@table.TableNumber</td>
+                                <td>@table.TableCapacity</td>
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@table.TableID" class="btn btn-sm btn-warning">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@table.TableID" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-end">
+                <a asp-action="Create" class="btn btn-primary mt-3">Add New Table</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .table thead {
+        font-weight: bold;
+    }
+</style>

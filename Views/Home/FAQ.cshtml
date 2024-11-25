@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "FAQ";
+}
+
+<div class="container mt-5">
+    <h1 class="display-5 text-center mb-4"><b>Frequently Asked Questions</b></h1>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    How does the table reservation feature work?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Customers can view available tables and book their preferred time slots through the system. The system ensures real-time updates and avoids double-booking.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    Can I track customer orders in real time?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, the system allows you to track orders in real time, providing updates from the kitchen to the delivery or serving staff.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    How secure is my restaurant data?
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    The system uses advanced encryption and secure storage methods to protect sensitive data, ensuring compliance with industry standards.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .accordion-button {
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+        .accordion-button:hover {
+            background-color: #e9ecef;
+        }
+
+    .accordion-body {
+        font-size: 1rem;
+    }
+</style>
